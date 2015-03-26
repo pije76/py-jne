@@ -21,6 +21,11 @@ jne.tracking(airbill='123455683982777')
 
 ```
 
+For pretty print response, add `pretty_print=True`
+```python
+jne.get_from_code('jakarta', pretty_print=True)
+```
+
 
 ## Test
 ```
