@@ -33,7 +33,7 @@ Usage
 ---
 ```python
 >>> from jne import Jne
->>> jne = Jne(api_key='d8dedbecf40d6c09f22704342907d804', username='APIUSER')
+>>> jne = Jne(api_key='d4dedbecf40d6d09f22704342c07d804', username='TESTAPI')
 >>> jne.get_from_code('jakarta')
 {u'detail': [{u'code': u'CGK10000', u'label': u'JAKARTA'}]}
 >>>
