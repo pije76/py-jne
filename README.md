@@ -12,7 +12,7 @@ Features
 - Get destination city code
 - Check JNE tariffs
 - Tracking stuff
-
+- Find Nearby
 
 
 Installation
@@ -196,6 +196,61 @@ Usage
       "drsheet_cnote_no": "1234567890123456",
       "mrsheet_date": "18-mar-2015 09:55",
       "pod_status": "ON PROCESS"
+    }
+  ]
+}
+>>>
+```
+
+#### 5. Find Nearby
+---
+```python
+>>> jne.find_nearby(latitude='-6.1886183', longitude='106.8387325')
+{u'places': [{u'custaddr1': u'JL CIKINI RAYA NO40 MENTENG JAKARTA PUSAT', u'custaddr2': None, u'jarak': u'     0.10', u'longitude': u'106.8385', u'custname': u'JNE ASP SEVEL CIKINI', u'latitude': u'-6.19164'}, {u'custaddr1': u'JL KWITANG RAYA NO 19-20 JAKARTA PUSAT', u'custaddr2': None, u'jarak': u'     0.26', u'longitude': u'106.8392', u'custname': u'JNE AGEN 0200033', u'latitude': u'-6.1808'}, {u'custaddr1': u'JL PEMBANGUNAN II NO 4 JAKARTA PUSAT', u'custaddr2': None, u'jarak': u'     0.27', u'longitude': u'106.83951', u'custname': u'JNE AGEN 0200006', u'latitude': u'-6.18073'}, {u'custaddr1': u'GD ALFA GLORIA PERKASA JL PEGANGSAAN TIMUR NO 1 CIKINI JAKARTA', u'custaddr2': None, u'jarak': u'     0.34', u'longitude': u'106.84045', u'custname': u'JNE AGEN 0200044', u'latitude': u'-6.19746'}, {u'custaddr1': u'MALL PLAZA ATRIUM LT 5 NO 8B SENEN JAKARTA PUSAT', u'custaddr2': None, u'jarak': u'     0.48', u'longitude': u'106.84177', u'custname': u'JNE AGEN 0200056', u'latitude': u'-6.17801'}]}
+>>>
+>>> # Show result with pretty print
+>>> jne.find_nearby(latitude='-6.1886183', longitude='106.8387325', pretty_print=True)
+{
+  "places": [
+    {
+      "custaddr1": "JL CIKINI RAYA NO40 MENTENG JAKARTA PUSAT",
+      "custaddr2": null,
+      "custname": "JNE ASP SEVEL CIKINI",
+      "jarak": "     0.10",
+      "latitude": "-6.19164",
+      "longitude": "106.8385"
+    },
+    {
+      "custaddr1": "JL KWITANG RAYA NO 19-20 JAKARTA PUSAT",
+      "custaddr2": null,
+      "custname": "JNE AGEN 0200033",
+      "jarak": "     0.26",
+      "latitude": "-6.1808",
+      "longitude": "106.8392"
+    },
+    {
+      "custaddr1": "JL PEMBANGUNAN II NO 4 JAKARTA PUSAT",
+      "custaddr2": null,
+      "custname": "JNE AGEN 0200006",
+      "jarak": "     0.27",
+      "latitude": "-6.18073",
+      "longitude": "106.83951"
+    },
+    {
+      "custaddr1": "GD ALFA GLORIA PERKASA JL PEGANGSAAN TIMUR NO 1 CIKINI JAKARTA",
+      "custaddr2": null,
+      "custname": "JNE AGEN 0200044",
+      "jarak": "     0.34",
+      "latitude": "-6.19746",
+      "longitude": "106.84045"
+    },
+    {
+      "custaddr1": "MALL PLAZA ATRIUM LT 5 NO 8B SENEN JAKARTA PUSAT",
+      "custaddr2": null,
+      "custname": "JNE AGEN 0200056",
+      "jarak": "     0.48",
+      "latitude": "-6.17801",
+      "longitude": "106.84177"
     }
   ]
 }
